@@ -1,7 +1,7 @@
 #source: https://stackoverflow.com/questions/16716302/how-do-i-fit-a-sine-curve-to-my-data-with-pylab-and-numpy
 
 #credit: https://stackoverflow.com/users/1196900/dhara
-
+from scipy.optimize import leastsq
 import pylab as plt
 import numpy as np
 
