@@ -32,8 +32,11 @@ data_fit = est_amp*np.sin(est_freq*t+est_phase) + est_mean
 fine_t = np.arange(0,max(t),0.1)
 data_fit=est_amp*np.sin(est_freq*fine_t+est_phase)+est_mean
 
-plt.plot(t, data, '.')
-plt.plot(t, data_first_guess, label='first guess')
-plt.plot(fine_t, data_fit, label='after fitting')
-plt.legend()
-plt.show()
+try:
+    plt.plot(t, data, '.')
+    plt.plot(t, data_first_guess, label='first guess')
+    plt.plot(fine_t, data_fit, label='after fitting')
+    plt.legend()
+    plt.show()
+except Exception as e: print(e)
+
